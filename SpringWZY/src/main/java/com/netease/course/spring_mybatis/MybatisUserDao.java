@@ -17,7 +17,7 @@ public interface MybatisUserDao {
             @Result(property = "lastName", column = "last_name")
     })
     @Select("select * from user")
-    public List<User> getUserList();
+    List<User> getUserList();
 
 
     @Results({
@@ -26,5 +26,5 @@ public interface MybatisUserDao {
             @Result(property = "lastName", column = "last_name")
     })
     @Select("select * from user where first_name=#{fisrtName}")
-    public User getUser(String firstName);
+    User getUser(String firstName);
 }

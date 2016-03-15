@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
@@ -12,11 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * Created by Eric on 3/15/16.
- */
 @Repository
-public class JdbcAccountDao {
+public class JdbcDao {
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
@@ -39,7 +35,7 @@ public class JdbcAccountDao {
         });
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional
     public void transferMoney(Long srcUserId, Long targetUserId, double count) {
         this.jdbcTemplate.update("UPDATE account SET balance=balance-? WHERE id=?", count, srcUserId);
         //throwE();

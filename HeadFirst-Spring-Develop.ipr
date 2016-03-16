@@ -130,6 +130,29 @@
         <element id="javaee-facet-resources" facet="SpringWZY/web/Web" />
       </root>
     </artifact>
+    <artifact type="war" name="freemarker:war">
+      <output-path>$PROJECT_DIR$/freemarker/target</output-path>
+      <root id="archive" name="freemarker.war">
+        <element id="artifact" artifact-name="freemarker:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="freemarker:war exploded">
+      <output-path>$PROJECT_DIR$/freemarker/target/freemarker</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="freemarker" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
+          </element>
+        </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/freemarker/target/freemarker/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="freemarker/web/Web" />
+      </root>
+    </artifact>
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
@@ -153,12 +176,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="freemarker" />
         <module name="spring-web" />
         <module name="SpringMVCDemo" />
         <module name="SpringWZY" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="freemarker" target="1.5" />
       <module name="spring-web" target="1.5" />
       <module name="springmvc" target="1.5" />
       <module name="SpringMVCDemo" target="1.5" />
@@ -645,6 +670,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/freemarker" />
     <file type="web" url="file://$PROJECT_DIR$/spring-web" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCDemo" />
@@ -656,6 +682,7 @@
         <option value="$PROJECT_DIR$/SpringMVCDemo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-web/pom.xml" />
         <option value="$PROJECT_DIR$/SpringWZY/pom.xml" />
+        <option value="$PROJECT_DIR$/freemarker/pom.xml" />
       </list>
     </option>
   </component>
@@ -795,6 +822,7 @@
       <module fileurl="file://$PROJECT_DIR$/HeadFirst-Spring-Develop.iml" filepath="$PROJECT_DIR$/HeadFirst-Spring-Develop.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVCDemo/SpringMVCDemo.iml" filepath="$PROJECT_DIR$/SpringMVCDemo/SpringMVCDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringWZY/SpringWZY.iml" filepath="$PROJECT_DIR$/SpringWZY/SpringWZY.iml" />
+      <module fileurl="file://$PROJECT_DIR$/freemarker/freemarker.iml" filepath="$PROJECT_DIR$/freemarker/freemarker.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-web/spring-web.iml" filepath="$PROJECT_DIR$/spring-web/spring-web.iml" />
     </modules>
   </component>

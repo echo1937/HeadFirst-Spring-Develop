@@ -153,6 +153,42 @@
         <element id="javaee-facet-resources" facet="freemarker/web/Web" />
       </root>
     </artifact>
+    <artifact type="war" name="webhomework:war">
+      <output-path>$PROJECT_DIR$/webhomework/target</output-path>
+      <root id="archive" name="webframe.war">
+        <element id="artifact" artifact-name="webhomework:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="webhomework:war exploded">
+      <output-path>$PROJECT_DIR$/webhomework/target/webframe</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="webhomework" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
+            <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.6.4" />
+            <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.4" />
+            <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.0" />
+          </element>
+        </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/webhomework/target/webframe/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="webhomework/web/Web" />
+      </root>
+    </artifact>
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
@@ -180,6 +216,7 @@
         <module name="spring-web" />
         <module name="SpringMVCDemo" />
         <module name="SpringWZY" />
+        <module name="webhomework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -188,6 +225,7 @@
       <module name="springmvc" target="1.5" />
       <module name="SpringMVCDemo" target="1.5" />
       <module name="SpringWZY" target="1.5" />
+      <module name="webhomework" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="" />
@@ -675,6 +713,7 @@
     <file type="web" url="file://$PROJECT_DIR$/springmvc" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCDemo" />
     <file type="web" url="file://$PROJECT_DIR$/SpringWZY" />
+    <file type="web" url="file://$PROJECT_DIR$/webhomework" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -683,6 +722,7 @@
         <option value="$PROJECT_DIR$/spring-web/pom.xml" />
         <option value="$PROJECT_DIR$/SpringWZY/pom.xml" />
         <option value="$PROJECT_DIR$/freemarker/pom.xml" />
+        <option value="$PROJECT_DIR$/webhomework/pom.xml" />
       </list>
     </option>
   </component>
@@ -824,6 +864,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringWZY/SpringWZY.iml" filepath="$PROJECT_DIR$/SpringWZY/SpringWZY.iml" />
       <module fileurl="file://$PROJECT_DIR$/freemarker/freemarker.iml" filepath="$PROJECT_DIR$/freemarker/freemarker.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-web/spring-web.iml" filepath="$PROJECT_DIR$/spring-web/spring-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webhomework/webhomework.iml" filepath="$PROJECT_DIR$/webhomework/webhomework.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7.0_71" project-jdk-type="JavaSDK">

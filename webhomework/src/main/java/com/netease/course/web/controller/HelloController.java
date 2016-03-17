@@ -4,15 +4,12 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateExceptionHandler;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,18 +17,6 @@ import java.util.Map;
 
 @Controller
 public class HelloController {
-
-    //http://localhost:8080/api/hello/users/123?msg=Hello
-
-    @RequestMapping("/users/login")
-    public String login(@RequestParam("name") String name,
-                        @RequestParam("password") String password,
-                        ModelMap map) throws IOException {
-        map.addAttribute("name", name);
-        map.addAttribute("password", password);
-        return "user";
-    }
-
 
     @RequestMapping("/users/{path:.+}")
     public void list(@PathVariable("path") String path,

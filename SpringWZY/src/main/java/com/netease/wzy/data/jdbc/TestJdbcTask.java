@@ -1,4 +1,4 @@
-package com.netease.wzy.data;
+package com.netease.wzy.data.jdbc;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;

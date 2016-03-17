@@ -1,4 +1,4 @@
-package com.netease.wzy.data;
+package com.netease.wzy.data.jdbc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -38,7 +38,7 @@ public class JdbcDao {
     @Transactional
     public void transferMoney(Long srcUserId, Long targetUserId, double count) {
         this.jdbcTemplate.update("UPDATE account SET balance=balance-? WHERE id=?", count, srcUserId);
-        //throwE();
+        throwE();
         this.jdbcTemplate.update("UPDATE account SET balance=balance+? WHERE id=?", count, targetUserId);
     }
 

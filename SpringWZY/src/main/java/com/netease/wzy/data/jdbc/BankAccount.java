@@ -1,4 +1,4 @@
-package com.netease.wzy.data;
+package com.netease.wzy.data.jdbc;
 
 public class BankAccount {
     private long userId;

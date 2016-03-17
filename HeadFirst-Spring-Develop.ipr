@@ -231,6 +231,48 @@
         <element id="javaee-facet-resources" facet="Spring-Blog/web/Web" />
       </root>
     </artifact>
+    <artifact type="war" name="Spring-Login:war">
+      <output-path>$PROJECT_DIR$/Spring-Login/target</output-path>
+      <root id="archive" name="login.war">
+        <element id="artifact" artifact-name="Spring-Login:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="Spring-Login:war exploded">
+      <output-path>$PROJECT_DIR$/Spring-Login/target/login</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="Spring-Login" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.23" />
+            <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.6.4" />
+            <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.4" />
+            <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.0" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.2.RELEASE" />
+            <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+            <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.7" />
+            <element id="library" level="project" name="Maven: org.apache.commons:commons-dbcp2:2.1.1" />
+            <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.4.2" />
+            <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
+          </element>
+        </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/Spring-Login/target/login/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="Spring-Login/web/Web" />
+      </root>
+    </artifact>
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
@@ -256,6 +298,7 @@
         <processorPath useClasspath="true" />
         <module name="freemarker" />
         <module name="Spring-Blog" />
+        <module name="Spring-Login" />
         <module name="spring-web" />
         <module name="SpringMVCDemo" />
         <module name="SpringWZY" />
@@ -265,6 +308,7 @@
     <bytecodeTargetLevel>
       <module name="freemarker" target="1.5" />
       <module name="Spring-Blog" target="1.5" />
+      <module name="Spring-Login" target="1.5" />
       <module name="spring-web" target="1.5" />
       <module name="springmvc" target="1.5" />
       <module name="SpringMVCDemo" target="1.5" />
@@ -754,6 +798,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/freemarker" />
     <file type="web" url="file://$PROJECT_DIR$/Spring-Blog" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring-Login" />
     <file type="web" url="file://$PROJECT_DIR$/spring-web" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCDemo" />
@@ -769,6 +814,7 @@
         <option value="$PROJECT_DIR$/freemarker/pom.xml" />
         <option value="$PROJECT_DIR$/webhomework/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-Blog/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-Login/pom.xml" />
       </list>
     </option>
   </component>
@@ -907,6 +953,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HeadFirst-Spring-Develop.iml" filepath="$PROJECT_DIR$/HeadFirst-Spring-Develop.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring-Blog/Spring-Blog.iml" filepath="$PROJECT_DIR$/Spring-Blog/Spring-Blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-Login/Spring-Login.iml" filepath="$PROJECT_DIR$/Spring-Login/Spring-Login.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVCDemo/SpringMVCDemo.iml" filepath="$PROJECT_DIR$/SpringMVCDemo/SpringMVCDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringWZY/SpringWZY.iml" filepath="$PROJECT_DIR$/SpringWZY/SpringWZY.iml" />
       <module fileurl="file://$PROJECT_DIR$/freemarker/freemarker.iml" filepath="$PROJECT_DIR$/freemarker/freemarker.iml" />
